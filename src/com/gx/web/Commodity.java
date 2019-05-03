@@ -22,6 +22,7 @@ import com.gx.service.CommodityService;
 @RequestMapping("/Commodity")
 public class Commodity {
 
+	
 	@Autowired
 	private CommodityService commodityService;
 	
@@ -39,6 +40,7 @@ public class Commodity {
 		@RequestMapping("/tolist")
 		public ModelAndView list(HttpServletRequest request, Integer currentPage, String txtname,Integer commodityTypeID){
 			ModelAndView mv=null;
+		
 			List<AttributePo> listOne=attributeService.selectCommodityType();
 			mv=new ModelAndView("/commodity/list");
 			Page<CommodityPo> vo=new Page<CommodityPo>();
